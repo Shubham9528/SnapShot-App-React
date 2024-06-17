@@ -13,10 +13,12 @@ Welcome to the SnapShot Project! This project is a simple React application that
 - [Acknowledgements](#acknowledgements)
 - 
 📖 Introduction
+
 The SnapShot Project is built using React and Material-UI. It includes a search functionality and predefined category buttons to fetch and display images based on the user’s input or selection.
 
 
 ✨ Features
+
 Simple user interface with search and category buttons.
 State management using React hooks.
 Component-based architecture.
