@@ -1,6 +1,10 @@
 🌐 SnapShot Project
 Welcome to the SnapShot Project! This project is a simple React application that allows users to browse images based on various categories and search queries.
 
+![1](https://github.com/Shubham9528/SnapShot-App-React/assets/81708211/deead987-f8ff-48c4-a9fc-204c5d972984)
+![2](https://github.com/Shubham9528/SnapShot-App-React/assets/81708211/2e359a1f-1b29-48f4-8d7d-d859c77683e6)
+
+
 📋 Table of Contents
 
 - [Introduction](#introduction)
@@ -11,7 +15,7 @@ Welcome to the SnapShot Project! This project is a simple React application that
 - [Contributing](#contributing)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
-- 
+
 📖 Introduction
 
 The SnapShot Project is built using React and Material-UI. It includes a search functionality and predefined category buttons to fetch and display images based on the user’s input or selection.
