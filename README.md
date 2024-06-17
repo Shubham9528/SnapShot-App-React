@@ -1,70 +1,164 @@
-# Getting Started with Create React App
+🌐 SnapShot Project
+Welcome to the SnapShot Project! This project is a simple React application that allows users to browse images based on various categories and search queries.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+📋 Table of Contents
 
-## Available Scripts
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Running Tests](#running-Tests)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
+- 
+📖 Introduction
+The SnapShot Project is built using React and Material-UI. It includes a search functionality and predefined category buttons to fetch and display images based on the user’s input or selection.
 
-In the project directory, you can run:
 
-### `npm start`
+✨ Features
+Simple user interface with search and category buttons.
+State management using React hooks.
+Component-based architecture.
+Integration with Material-UI for styling and layout.
+💻 Installation
+To get started with the project, follow these steps:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Clone the repository:
+bash
+```
+git clone https://github.com/your-username/snapshot-project.git
+```
+Navigate to the project directory:
+bash
+```
+cd snapshot-project
+```
+Install dependencies:
+bash
+```
+npm install
+```
+🚀 Usage
+To run the project locally, use the following command:
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+bash
+```
+npm start
+```
+Open your browser and navigate to http://localhost:3000 to see the application in action.
 
-### `npm run build`
+📄 Component Description
+App Component
+The App component is the main entry point of the application. It sets up the structure and includes other components like ImageGallery.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+javascript
+```
+import SearchBox from "./SearchBox";
+import ImageGallery from "./ImageGallery";
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+export default function App() {
+  return (
+    <div className="App">
+      <h1>SnapShot</h1>
+      {/* <SearchBox /> */}
+      <ImageGallery />
+    </div>
+  );
+}
+```
+The index.js file is responsible for rendering the App component to the DOM.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+javascript
+```
+import { createRoot } from "react-dom/client";
+import App from "./components/App";
 
-### `npm run eject`
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+root.render(<App />);
+```
+ButtonGroup Component
+The ButtonGroup component provides category buttons that users can click to filter images by predefined categories.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+javascript
+```
+import React from "react";
+import Button from "@mui/material/Button";
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+function ButtonGroup(props) {
+  function handleClick(event) {
+    const { value } = event.target;
+    props.onAdd(value);
+  }
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  return (
+    <div className="button">
+      <Button onClick={handleClick} variant="contained" value="mountain">
+        Mountain
+      </Button>
+      <Button onClick={handleClick} variant="contained" value="beaches">
+        Beaches
+      </Button>
+      <Button onClick={handleClick} variant="contained" value="bird">
+        Bird
+      </Button>
+      <Button onClick={handleClick} variant="contained" value="food">
+        Food
+      </Button>
+    </div>
+  );
+}
+```
 
-## Learn More
+export default ButtonGroup;
+SearchBox Component
+The SearchBox component allows users to input a search query and submit it to fetch related images.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+javascript
+```
+import React, { useState } from "react";
+import SearchIcon from "@mui/icons-material/Search";
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+function SearchBox(props) {
+  const [search, setSearch] = useState("");
 
-### Code Splitting
+  function handleSearch(event) {
+    const { value } = event.target;
+    setSearch(value);
+  }
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  function handleClick() {
+    props.onAdd(search);
+    setSearch("");
+  }
 
-### Analyzing the Bundle Size
+  return (
+    <div className="search">
+      <input
+        onChange={handleSearch}
+        name="inputBox"
+        placeholder="Search"
+        value={search}
+      />
+      <button onClick={handleClick}>
+        <SearchIcon />
+      </button>
+    </div>
+  );
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+export default SearchBox;
+🤝 Contributing
+Contributions are welcome! If you have any ideas or suggestions to improve the project, feel free to open an issue or submit a pull request.
 
-### Making a Progressive Web App
+📄 License
+This project is licensed under the MIT License. See the LICENSE file for more details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+🙏 Acknowledgements
+Thanks to the React and Material-UI teams for their amazing libraries and tools.
+Made with ❤️ by Shubham Shinde
