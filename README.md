@@ -1,11 +1,12 @@
-🌐 SnapShot Project
+### 🌐 SnapShot Project
+
 Welcome to the SnapShot Project! This project is a simple React application that allows users to browse images based on various categories and search queries.
 
 ![1](https://github.com/Shubham9528/SnapShot-App-React/assets/81708211/deead987-f8ff-48c4-a9fc-204c5d972984)
 ![2](https://github.com/Shubham9528/SnapShot-App-React/assets/81708211/2e359a1f-1b29-48f4-8d7d-d859c77683e6)
 
 
-📋 Table of Contents
+## 📋 Table of Contents
 
 - [Introduction](#introduction)
 - [Features](#features)
@@ -16,12 +17,12 @@ Welcome to the SnapShot Project! This project is a simple React application that
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
 
-📖 Introduction
+## 📖 Introduction
 
 The SnapShot Project is built using React and Material-UI. It includes a search functionality and predefined category buttons to fetch and display images based on the user’s input or selection.
 
 
-✨ Features
+## ✨ Features
 
 Simple user interface with search and category buttons.
 State management using React hooks.
@@ -46,7 +47,7 @@ bash
 ```
 npm install
 ```
-🚀 Usage
+## 🚀 Usage
 To run the project locally, use the following command:
 
 
@@ -56,7 +57,7 @@ npm start
 ```
 Open your browser and navigate to http://localhost:3000 to see the application in action.
 
-📄 Component Description
+## 📄 Component Description
 App Component
 The App component is the main entry point of the application. It sets up the structure and includes other components like ImageGallery.
 
@@ -159,12 +160,12 @@ function SearchBox(props) {
 ```
 
 export default SearchBox;
-🤝 Contributing
+## 🤝 Contributing
 Contributions are welcome! If you have any ideas or suggestions to improve the project, feel free to open an issue or submit a pull request.
 
-📄 License
-This project is licensed under the MIT License. See the LICENSE file for more details.
+## 📄 License
+This project is licensed under the -- License. See the LICENSE file for more details.
 
-🙏 Acknowledgements
+# 🙏 Acknowledgements
 Thanks to the React and Material-UI teams for their amazing libraries and tools.
 Made with ❤️ by Shubham Shinde
